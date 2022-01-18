@@ -10,10 +10,10 @@ jobs:
       - name: Checkmarx AST CLI Action
         uses: checkmarxDev/ast-github-action@master #Github Action version
         with:
-          project_name: small-project
+          project_name: andre-small-project-v2
           base_uri: https://ast-master.dev.cxast.net/
           branch: ${{ github.head_ref }}
           cx_tenant: galactica
           cx_client_id: ${{ secrets.CX_CLIENT_ID }}
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
-          additional_params: --threshold "sast-high=4;sca-high=1;kics-high=1"
+          additional_params: --threshold "sast-high=2;sca-high=1;kics-high=1"
